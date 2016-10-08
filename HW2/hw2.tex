@@ -1,0 +1,73 @@
+\documentclass[letterpaper, 11pt]{article}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{times}
+\usepackage{amsmath,amsfonts,amsthm}
+
+\newcommand*{\defeq}{\mathrel{\vcenter{\baselineskip0.5ex \lineskiplimit0pt
+                     \hbox{\scriptsize.}\hbox{\scriptsize.}}}%
+                     =}
+
+\begin{document}
+
+\renewcommand{\theenumi}{\alph{enumi}}
+
+
+
+\title{600.464 Randomized and Big Data Algorithms \\ Homework \#2 Answers}
+\author{Ravindra Gaddipati}
+
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section*{Problem 1 (3 points)}
+Alice and Bob play checkers often. Alice is a better player. so the probability that she wins any given game is 0.6, independent of all other games. They decide to play a tournament of $n$ games. Bound the probability that Alice loses the tournament using a Chernoff bound. \\
+\textbf{Answer:} \\
+If Alice loses, she wins less than half the games. Let $X$ be the number of games Alice wins, we want to bound $P(X < n/2)$.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section*{Problem 2 (3 points)}
+\begin{enumerate}
+	\item In an election with two candidates using paper ballots, each vote is independently misrecorded with probability p = 0.02. Use a Chernoff bound to bound the probability that more than 4\% of the votes are misrecorded in an election of 1,000,000 ballots.
+	\item Assume that a misrecorded ballot always counts as a vote for the other candidate. Suppose that candidate A received 5lO,000 votes and that candidate B received 490,000 votes. Use Chernoff bounds to bound the probability that candidate B wins the election owing to misrecorded ballots. Specifically, let $X$ be the number of votes for candidate A that are misrecorded and let $Y$ be the number of votes for candidate B that are misrecorded. Bound $Pr((X > k) \cap (Y < l))$ for suitable choices of $k$ and $e$. 
+\end{enumerate}
+\textbf{Answer:} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section*{Problem 3 (3 points)}
+Recall that a function $f$ is said to be \emph{convex} if for any $x1$, $x2$ and for $0 \leq \lambda \leq 1$,
+$$f(\lambda x_1 + (1-\lambda)x_2) \leq \lambda f(x_1) + (1-\lambda)f(x_2)$$
+\begin{enumerate}
+	\item Let $Z$ be a random variable that takes on a (finite) set of values in the interval [0,1], and let $p=E[Z]$. Define the Bernoulli random variable $X$ by $Pr(X=1)=p$ and $Pr(X=0)=1-p$, show that $E[f(Z)] \leq E[f(X)]$ for any convex function $f$.
+	\item Use the fact that $f(x) = e^{tx}$ is convex for any $t \geq 0$ to obtain a Chernoff-like bound for $Z$ baesd on a Chernoff bound for $X$.
+\end{enumerate}
+\textbf{Answer:} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section*{Problem 4 (3 points)}
+Let $X_0=0$ and for $j \geq 0$ let $X_{j+1}$ be chosen uniformly over the real interval $[X_j,1]$. Show that, for $k \geq 0$, the sequence
+$$Y_k=2^k(1-X_k)$$
+is a martingale. \\
+\textbf{Answer:} \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
+\section*{Problem 5 (3 points)}
+Consider a random graph from $G_{n,N}$, where $N=cn$ for some constant $c>0$. Let $X$ be the expected number of isolated verticies (i.e., verticies of degree 0).
+\begin{enumerate}
+	\item Determine $E[X]$
+	\item Show that:
+		$$ P(|X-E[X]| \geq 2\lambda \sqrt{cn}) \leq 2e^{- \lambda^2/2}$$
+\end{enumerate}
+\textbf{Answer:} \\
+
+
+\end{document}
